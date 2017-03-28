@@ -1,0 +1,14 @@
+{
+  "name": "beatlemania",
+  "version": "1.0.0",
+  "description": "A combination of services for each provider",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.10.0",
+    "eslint-config-eta": "^0.0.9"
+  }
+}
