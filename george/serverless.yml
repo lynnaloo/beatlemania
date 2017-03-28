@@ -17,14 +17,14 @@ plugins:
 package:
   exclude:
     - node_modules/**
-    - .gitignore
     - package.json
-    - .git/**
 
 functions:
   sing:
-    handler: beatles
+    handler: sing
     events:
-      - http: sing
+      - http:
+          path: sing
+          method: get
 
       

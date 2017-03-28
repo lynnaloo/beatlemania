@@ -6,15 +6,7 @@ A Serverless Framework Example for Microsoft Azure Functions
 
 - Setup [Microsoft Azure Functions](https://serverless.com/framework/docs/providers/azure)
 
-# Install
-
-In this directory
-
-```
-$ npm install
-$ serverless deploy
-$ serverless invoke -f sing
-```
+TODO: Azure coming soon!
 
 
 

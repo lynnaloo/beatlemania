@@ -1,9 +1,12 @@
 service: beatlemania 
 frameworkVersion: ">=1.6.0 <2.0.0"
 
+# Please ensure the serverless-openwhisk provider plugin is installed globally.
+# $ npm install -g serverless-openwhisk
+# ...before installing project dependencies to register this provider.
+# $ npm install
 provider:
-  name: aws
-  runtime: nodejs4.3
+  name: openwhisk
   memorySize: 512 
 
 # needs more granular excluding in production as only the serverless provider npm
@@ -16,7 +19,6 @@ package:
 functions:
   sing:
     handler: handler.sing
-    handler: handler.endpoint
     events:
       - http:
           path: sing

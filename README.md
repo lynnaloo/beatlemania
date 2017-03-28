@@ -1,6 +1,6 @@
 # Beatlemania
 
-A Serverless Framework Example with a simple HTTP service deployed on four different cloud platforms - John (Amazon Web Services), Paul (IBM BlueMix), George (Google Cloud Platform, and Ringo (Microsoft Azure)
+A Serverless Framework Example with a simple HTTP service deployed on four different cloud platforms - John (Amazon Web Services), Paul (IBM BlueMix), George (Google Cloud Platform, and Ringo (Microsoft Azure - TODO)
 
 ## Setup
 

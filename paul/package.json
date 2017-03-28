@@ -1,0 +1,17 @@
+{
+  "name": "openwhisk-nodejs",
+  "version": "1.0.0",
+  "description": "Apache OpenWhisk service.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm link serverless-openwhisk"
+  },
+  "keywords": [
+    "serverless",
+    "openwhisk"
+  ],
+  "dependencies": {
+    "serverless-openwhisk": "^0.5.0"
+  }
+}
