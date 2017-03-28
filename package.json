@@ -5,8 +5,11 @@
   "scripts": {
     "lint": "eslint ."
   },
+  "author": "Linda Nichols <lynnaloo@gmail.com",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "serverless": "^1.9.0"
+  },
   "devDependencies": {
     "eslint": "^3.10.0",
     "eslint-config-eta": "^0.0.9"

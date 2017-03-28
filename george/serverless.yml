@@ -1,0 +1,30 @@
+service: beatlemania # the word "google" can't be in here
+frameworkVersion: ">=1.6.0 <2.0.0"
+
+provider:
+  name: google
+  runtime: nodejs
+  project: george
+  memorySize: 512 
+  # the path to the credentials file needs to be absolute
+  credentials: /Users/lynnaloo/.gcloud/creds.json
+
+plugins:
+  - serverless-google-cloudfunctions
+
+# needs more granular excluding in production as only the serverless provider npm
+# package should be excluded (and not the whole node_modules directory)
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - package.json
+    - .git/**
+
+functions:
+  sing:
+    handler: beatles
+    events:
+      - http: sing
+
+      
