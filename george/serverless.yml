@@ -23,8 +23,6 @@ functions:
   sing:
     handler: sing
     events:
-      - http:
-          path: sing
-          method: get
+      - http: sing
 
       

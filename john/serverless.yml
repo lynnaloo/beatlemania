@@ -4,6 +4,7 @@ frameworkVersion: ">=1.6.0 <2.0.0"
 provider:
   name: aws
   runtime: nodejs4.3
+  region: us-east-1
   memorySize: 512 
 
 # needs more granular excluding in production as only the serverless provider npm
@@ -21,5 +22,4 @@ functions:
       - http:
           path: sing
           method: get
-
       

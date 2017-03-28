@@ -7,7 +7,9 @@ frameworkVersion: ">=1.6.0 <2.0.0"
 # $ npm install
 provider:
   name: openwhisk
-  memorySize: 512 
+  runtime: nodejs:6
+  memorySize: 256
+  timeout: 30
 
 # needs more granular excluding in production as only the serverless provider npm
 # package should be excluded (and not the whole node_modules directory)
@@ -20,8 +22,6 @@ functions:
   sing:
     handler: handler.sing
     events:
-      - http:
-          path: sing
-          method: get
+      - http: GET /users/create
 
       
