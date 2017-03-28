@@ -4,10 +4,9 @@ frameworkVersion: ">=1.6.0 <2.0.0"
 provider:
   name: google
   runtime: nodejs
-  project: george
-  memorySize: 512 
+  project: your-project # your project on google - create this first
   # the path to the credentials file needs to be absolute
-  credentials: /Users/lynnaloo/.gcloud/creds.json
+  credentials: /Users/your-username/.gcloud/creds.json # has to be full path
 
 plugins:
   - serverless-google-cloudfunctions
@@ -17,12 +16,21 @@ plugins:
 package:
   exclude:
     - node_modules/**
+    - .gitignore
     - package.json
+    - .git/**
 
 functions:
   sing:
     handler: sing
     events:
       - http: sing
+
+# you can define resources, templates etc. the same way you would in a
+# Google Cloud deployment configuration
+resources:
+  resources:
+    - type: storage.v1.bucket
+      name: beatlemania-service-bucket      
 
       

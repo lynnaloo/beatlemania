@@ -1,0 +1,22 @@
+
+service: beatlemania
+frameworkVersion: ">=1.6.0 <2.0.0"
+
+provider:
+  name: azure
+  azureSubId: YourAzureSubscriptionID
+  azureServicePrincipalTenantId: servicePrincipalTenantId
+  azureservicePrincipalClientId: servicePrincipalClientId
+  azureServicePrincipalPassword: servicePrincipalPassword
+  location: West US
+
+plugins:
+  - serverless-azure-functions
+
+functions:
+  sing: 
+    handler: handler.sing
+    events: 
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous

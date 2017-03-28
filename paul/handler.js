@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports.sing = (params) => {
-  return { payload: 'All you need is love' };
+  console.log('All you need is love');
+  return 'All you need is love';
 };

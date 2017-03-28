@@ -7,8 +7,6 @@ provider:
   region: us-east-1
   memorySize: 512 
 
-# needs more granular excluding in production as only the serverless provider npm
-# package should be excluded (and not the whole node_modules directory)
 package:
   exclude:
     - node_modules/**
@@ -17,7 +15,6 @@ package:
 functions:
   sing:
     handler: handler.sing
-    handler: handler.endpoint
     events:
       - http:
           path: sing

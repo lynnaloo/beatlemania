@@ -1,0 +1,16 @@
+{
+  "name": "ringo",
+  "version": "1.0.0",
+  "description": "Microsoft Azure Functions Service",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "serverless",
+    "azurefunctions"
+  ],
+  "dependencies": {
+    "serverless-azure-functions": "^0.1.2"
+  }
+}
