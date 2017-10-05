@@ -1,12 +1,11 @@
 service: beatlemania # the word "google" can't be in here
-frameworkVersion: ">=1.6.0 <2.0.0"
+frameworkVersion: ">=1.9.0 <2.0.0"
 
 provider:
   name: google
   runtime: nodejs
-  project: your-project # your project on google - create this first
-  # the path to the credentials file needs to be absolute
-  credentials: /Users/your-username/.gcloud/creds.json # has to be full path
+  project: beatlemania-182023 # your project on google - create this first
+  credentials: ~/.gcloud/beatlemania.json 
 
 plugins:
   - serverless-google-cloudfunctions
@@ -24,13 +23,6 @@ functions:
   sing:
     handler: sing
     events:
-      - http: sing
-
-# you can define resources, templates etc. the same way you would in a
-# Google Cloud deployment configuration
-resources:
-  resources:
-    - type: storage.v1.bucket
-      name: beatlemania-service-bucket      
+      - http: sing  
 
       

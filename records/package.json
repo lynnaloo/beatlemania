@@ -1,0 +1,8 @@
+{
+  "name": "records",
+  "version": "1.0.0",
+  "description": "Libraries for Beatlemania",
+  "main": "index.js",
+  "author": "Linda Nichols <lynnaloo@gmail.com>",
+  "license": "MIT"
+}

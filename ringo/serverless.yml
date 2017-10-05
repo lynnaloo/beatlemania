@@ -1,6 +1,6 @@
 
 service: beatlemania
-frameworkVersion: ">=1.6.0 <2.0.0"
+frameworkVersion: ">=1.9.0 <2.0.0"
 
 provider:
   name: azure
@@ -20,3 +20,8 @@ functions:
       - http: true
         x-azure-settings:
           authLevel : anonymous
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+     

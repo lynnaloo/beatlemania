@@ -12,6 +12,6 @@
     "openwhisk"
   ],
   "dependencies": {
-    "serverless-openwhisk": "^0.5.0"
+    "serverless-openwhisk": "*"
   }
 }

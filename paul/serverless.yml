@@ -1,5 +1,5 @@
 service: beatlemania 
-frameworkVersion: ">=1.6.0 <2.0.0"
+frameworkVersion: ">=1.9.0 <2.0.0"
 
 # Please ensure the serverless-openwhisk provider plugin is installed globally.
 # $ npm install -g serverless-openwhisk
@@ -7,13 +7,8 @@ frameworkVersion: ">=1.6.0 <2.0.0"
 # $ npm install
 provider:
   name: openwhisk
-  ignore_certs: true
+  #ignore_certs: true
   runtime: nodejs:6
-
-package:
-  exclude:
-    - node_modules/**
-    - package.json
 
 functions:
   sing:

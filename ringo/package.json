@@ -11,6 +11,6 @@
     "azurefunctions"
   ],
   "dependencies": {
-    "serverless-azure-functions": "^0.1.2"
+    "serverless-azure-functions": "*"
   }
 }
