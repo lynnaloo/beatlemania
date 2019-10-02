@@ -1,5 +1,3 @@
-'use strict';
-
 const sample = require('lodash.sample');
 
 const lyrics = [
