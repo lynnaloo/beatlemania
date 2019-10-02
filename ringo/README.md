@@ -1,6 +1,6 @@
 # Serverless Example - Microsoft Azure Functions - Node.js
 
-A Serverless Framework Example for Microsoft Azure Functions (TODO)
+A Serverless Framework Example for Microsoft Azure Functions
 
 ## Setup
 
