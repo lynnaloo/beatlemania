@@ -1,6 +1,6 @@
 {
   "name": "beatlemania",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A combination of services for each provider",
   "scripts": {
     "lint": "eslint ."
@@ -11,7 +11,10 @@
     "serverless": "^1.23.0"
   },
   "devDependencies": {
-    "eslint": "^3.10.0",
-    "eslint-config-eta": "^0.0.9"
+    "assert": "^2.0.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-shopify": "^30.0.1",
+    "mocha": "^6.2.0"
   }
 }

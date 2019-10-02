@@ -1,17 +1,51 @@
-service: beatlemania 
-frameworkVersion: ">=1.6.0 <2.0.0"
+service: beatlemania
+app: beatlemania
 
 provider:
   name: aws
-  runtime: nodejs6.10
-  region: us-east-1
-  memorySize: 512 
+  runtime: nodejs10.x
+  stage: dev
+
+# you can overwrite defaults here
+region: us-east-1
 
 functions:
   sing:
-    handler: handler.sing
+    handler: handlers/handler.sing
     events:
       - http:
           path: sing
           method: get
-      
+#      - websocket: $connect
+#      - s3: ${env:BUCKET}
+#      - schedule: rate(10 minutes)
+#      - sns: greeter-topic
+#      - stream: arn:aws:dynamodb:region:XXXXXX:table/foo/stream/1970-01-01T00:00:00.000
+#      - alexaSkill: amzn1.ask.skill.xx-xx-xx-xx
+#      - alexaSmartHome: amzn1.ask.skill.xx-xx-xx-xx
+#      - iot:
+#          sql: "SELECT * FROM 'some_topic'"
+#      - cloudwatchEvent:
+#          event:
+#            source:
+#              - "aws.ec2"
+#            detail-type:
+#              - "EC2 Instance State-change Notification"
+#            detail:
+#              state:
+#                - pending
+#      - cloudwatchLog: '/aws/lambda/hello'
+#      - cognitoUserPool:
+#          pool: MyUserPool
+#          trigger: PreSignUp
+#      - alb:
+#          listenerArn: arn:aws:elasticloadbalancing:us-east-1:XXXXXX:listener/app/my-load-balancer/50dc6c495c0c9188/
+#          priority: 1
+#          conditions:
+#            host: example.com
+#            path: /hello
+
+#    Define function environment variables here
+#    environment:
+#      variable2: value2
+

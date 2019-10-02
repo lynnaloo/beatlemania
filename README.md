@@ -1,6 +1,6 @@
 # Beatlemania
 
-A Serverless Framework Example with a simple HTTP service deployed on four different cloud platforms - John (Amazon Web Services), Paul (IBM BlueMix), George (Google Cloud Platform, and Ringo (Microsoft Azure)
+A Serverless Framework Example with a simple HTTP service deployed on four different cloud platforms - John (Amazon Web Services), Paul (IBM Cloud), George (Google Cloud Platform, and Ringo (Microsoft Azure)
 
 ## Setup
 
@@ -8,7 +8,7 @@ See the `README.md` in each service for more instructions for that FaaS environm
 
 # Install
 
-With [Node 6.5](https://nodejs.org/) installed, install the Serverless Architecture:
+With [Node LTS](https://nodejs.org/) installed, install the Serverless Framework:
 
 ```
 $ npm install -g serverless

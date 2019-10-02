@@ -1,6 +1,6 @@
 {
-  "name": "george",
-  "version": "1.0.0",
+  "name": "john",
+  "version": "2.0.0",
   "description": "AWS Lambda service",
   "main": "handler.js",
   "scripts": {
