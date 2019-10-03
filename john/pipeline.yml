@@ -18,12 +18,12 @@ steps:
   displayName: 'Install Serverless Framework (John)'
 
 - script: |
-    # npm ci
+    npm install
     npm run lint
   displayName: 'Run lint on all code'
 
 - script: |
-    npm ci
+    npm install
     npm test
   workingDirectory: $(Build.SourcesDirectory)/john
   displayName: 'Install libraries and test code (John)'
