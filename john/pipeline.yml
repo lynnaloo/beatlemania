@@ -23,3 +23,13 @@ steps:
     # npm test
   workingDirectory: $(Build.SourcesDirectory)/john
   displayName: 'Install libraries, lint, and test (John)'
+
+  - script: |
+    sls deploy --stage dev --region "us-east-1"
+  workingDirectory: $(Build.SourcesDirectory)/john
+  env:
+    # AWS Credentials
+    # Values stored as secret variables
+    AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+    AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+  displayName: 'Deploy AWS Lambda (John)'
