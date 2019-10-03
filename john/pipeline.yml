@@ -24,7 +24,7 @@ steps:
   workingDirectory: $(Build.SourcesDirectory)/john
   displayName: 'Install libraries, lint, and test (John)'
 
-  - script: |
+- script: |
     sls deploy --stage dev --region "us-east-1"
   workingDirectory: $(Build.SourcesDirectory)/john
   env:
