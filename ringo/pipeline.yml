@@ -15,14 +15,14 @@ steps:
 
 - script: |
     npm install -g serverless
-  displayName: 'Install Serverless Framework'
+  displayName: 'Install Serverless Framework (Ringo)'
 
 - script: |
     npm ci
     # npm run lint
     # npm test
   workingDirectory: $(Build.SourcesDirectory)/ringo
-  displayName: 'Install libraries, lint, and test'
+  displayName: 'Install libraries, lint, and test (Ringo)'
 
 - script: |
     sls deploy --stage dev --region "East US"
