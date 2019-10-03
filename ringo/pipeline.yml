@@ -29,6 +29,7 @@ steps:
 
 - script: |
     sls deploy --stage dev --region "East US"
+  workingDirectory: $(Build.SourcesDirectory)/ringo
   env:
     # Azure Service Principal
     # Values stored as secret variables
