@@ -7,14 +7,9 @@
   },
   "author": "Linda Nichols <lynnaloo@gmail.com",
   "license": "MIT",
-  "dependencies": {
-    "serverless": "^1.23.0"
-  },
   "devDependencies": {
-    "assert": "^2.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-shopify": "^30.0.1",
-    "mocha": "^6.2.0"
+    "eslint-plugin-shopify": "^30.0.1"
   }
 }

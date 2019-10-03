@@ -4,7 +4,8 @@
   "description": "Microsoft Azure Functions Service",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -c",
+    "lint": "eslint . --ext .js"
   },
   "keywords": [
     "serverless",
@@ -12,5 +13,9 @@
   ],
   "dependencies": {
     "serverless-azure-functions": "*"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "mocha": "^6.2.0"
   }
 }
