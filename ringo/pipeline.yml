@@ -17,8 +17,8 @@ steps:
   inputs:
     versionSpec: $(node_version)
 - bash: |
-      npm install -g serverless
-    displayName: 'Install Serverless Framework'
+    npm install -g serverless
+  displayName: 'Install Serverless Framework'
 
 - script: |
     npm ci
