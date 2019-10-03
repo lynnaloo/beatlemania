@@ -16,7 +16,8 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: $(node_version)
-- bash: |
+
+- script: |
     npm install -g serverless
   displayName: 'Install Serverless Framework'
 
@@ -24,5 +25,16 @@ steps:
     npm ci
     # npm run lint
     # npm test
-    # sls deploy
-  displayName: 'npm install, lint, and test'
+  displayName: 'Build, Lint, and Test'
+
+- script: |
+    sls deploy --stage dev --region "East US"
+
+    env:
+      # Azure Service Principal
+      # Values stored as secret variables
+      AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
+      AZURE_TENANT_ID: $(AZURE_TENANT_ID)
+      AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
+      AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
+  displayName: 'Deploy Azure Function App (Ringo)'
