@@ -1,4 +1,3 @@
-'use strict';
 
 exports.sing = (request, response) => {
   console.log('All you need is love');

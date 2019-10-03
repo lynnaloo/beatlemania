@@ -18,11 +18,15 @@ steps:
   displayName: 'Install Serverless Framework (John)'
 
 - script: |
+    # npm ci
+    npm run lint
+  displayName: 'Run lint on all code'
+
+- script: |
     npm ci
-    # npm run lint
-    # npm test
+    npm test
   workingDirectory: $(Build.SourcesDirectory)/john
-  displayName: 'Install libraries, lint, and test (John)'
+  displayName: 'Install libraries and test code (John)'
 
 - script: |
     sls deploy --stage dev --region "us-east-1"
