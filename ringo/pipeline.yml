@@ -7,15 +7,11 @@ pr:
 
 pool:
   vmImage: 'ubuntu-latest'
-strategy:
-  matrix:
-    node_10_x:
-      node_version: 10.x
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: $(node_version)
+    versionSpec: '10.x'
 
 - script: |
     npm install -g serverless
@@ -25,6 +21,10 @@ steps:
     npm ci
     # npm run lint
     # npm test
+  workingDirectory: $(Build.SourcesDirectory)/ringo
+  displayName: 'Install libraries, lint, and test'
+
+- script: |
     sls deploy --stage dev --region "East US"
   workingDirectory: $(Build.SourcesDirectory)/ringo
   env:
@@ -34,4 +34,4 @@ steps:
     AZURE_TENANT_ID: $(AZURE_TENANT_ID)
     AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
     AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
-  displayName: 'Install libraries and deploy Azure Function App (Ringo)'
+  displayName: 'Deploy Azure Function App (Ringo)'
