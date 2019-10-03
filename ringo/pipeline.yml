@@ -29,12 +29,11 @@ steps:
 
 - script: |
     sls deploy --stage dev --region "East US"
-
-    env:
-      # Azure Service Principal
-      # Values stored as secret variables
-      AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
-      AZURE_TENANT_ID: $(AZURE_TENANT_ID)
-      AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
-      AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
+  env:
+    # Azure Service Principal
+    # Values stored as secret variables
+    AZURE_SUBSCRIPTION_ID: $(AZURE_SUBSCRIPTION_ID)
+    AZURE_TENANT_ID: $(AZURE_TENANT_ID)
+    AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
+    AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
   displayName: 'Deploy Azure Function App (Ringo)'
