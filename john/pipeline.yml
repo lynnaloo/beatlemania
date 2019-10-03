@@ -7,22 +7,29 @@ pr:
 
 pool:
   vmImage: 'ubuntu-latest'
-strategy:
-  matrix:
-    node_10_x:
-      node_version: 10.x
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: $(node_version)
-- bash: |
+    versionSpec: '10.x'
+
+- script: |
     npm install -g serverless
-  displayName: 'Install Serverless Framework'
+  displayName: 'Install Serverless Framework (John)'
 
 - script: |
     npm ci
     # npm run lint
     # npm test
-    # sls deploy
-  displayName: 'npm install, lint, and test'
+  workingDirectory: $(Build.SourcesDirectory)/john
+  displayName: 'Install libraries, lint, and test (John)'
+
+- script: |
+    sls deploy --stage dev --region "us-east-1"
+  workingDirectory: $(Build.SourcesDirectory)/john
+  env:
+    # AWS Credentials
+    # Values stored as secret variables
+    AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+    AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+  displayName: 'Deploy AWS Lambda (John)'
