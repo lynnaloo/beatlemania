@@ -1,5 +1,4 @@
-service: beatlemania 
-frameworkVersion: ">=1.9.0 <2.0.0"
+service: paul
 
 # Please ensure the serverless-openwhisk provider plugin is installed globally.
 # $ npm install -g serverless-openwhisk
@@ -16,8 +15,8 @@ functions:
     events:
       - http: GET sing
 
-# remember to run npm install to download the provider plugin.        
+# remember to run npm install to download the provider plugin.
 plugins:
     - serverless-openwhisk
 
-      
+

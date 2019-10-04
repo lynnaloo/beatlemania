@@ -9,6 +9,6 @@
   "author": "Linda Nichols <lynnaloo@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "serverless-google-cloudfunctions": "^1.1.0"
+    "serverless-google-cloudfunctions": "*"
   }
 }
