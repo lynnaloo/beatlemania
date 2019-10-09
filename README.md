@@ -24,7 +24,7 @@ $ cd beatlemania
 Choose a cloud platform, install libraries, deploy, and run!
 
 ```
-$ cd george
+$ cd john
 $ npm install
 $ serverless deploy
 $ serverless invoke -f sing
