@@ -36,5 +36,5 @@ steps:
     # Values stored as secret variables
     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
-  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  #condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
   displayName: 'Deploy AWS Lambda (John)'
